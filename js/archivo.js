@@ -1,11 +1,11 @@
 ///SABER MI PROMEDIO
 
-/*
 const conductamuybuena = 10;
 const conductabuena = 7;
-const conductamala = 4;
+const conductamala = 4;  
 
 do {
+    alumno = (prompt("Ingrese el nombre del alumno")).toLowerCase();
     nota1 = parseFloat(prompt("Ingrese la nota examen 1")); 
     nota2 = parseFloat(prompt("Ingrese la nota examen 2"));
     nota3 = parseFloat(prompt("Ingrese la nota examen 3"));
@@ -18,14 +18,15 @@ do {
         nota4 = conductamala;
      }else{
         alert ("Ingrese una conducta valida")
-     }
-
-     
+     }      
 
 }while(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4));
 
-alert ((nota1 + nota2 + nota3 + nota4) / 4); */
+function promediofinal (nota1 , nota2, nota3, nota4){
+   return (nota1 + nota2 + nota3 + nota4)/4;
+} 
 
+alert ("El/la alumno/a " + alumno + " tiene un promedio de " + promediofinal(nota1,nota2,nota3,nota4));
 ///AGREGANDO, ALUMNOS
 
 
@@ -48,13 +49,17 @@ const alumno5 = new Alumnos("5","Alvarez","Benjamin","25","comunicacion")
 const alumnos = [alumno1,alumno2,alumno3,alumno4,alumno5]
 const profesores = []
 
-
-console.log(alumnos)
-console.log(alumnos.length);
-alumnos.pop(alumnos);
-console.log(alumnos.length);
-alumnos.splice(0,2);
-console.log(alumnos.length);
 alumnos.push(alumno6 = new Alumnos("6","Rivera","Juan","20","naturales"))
 alumnos.unshift(alumno7= new Alumnos("7","Torres","Bruno","3","comunicacion"))
-console.log(alumnos)
+
+
+function buscarAlumno(nombre) {
+   let nombrealumno = prompt("Ingrese el nombre del alumno")
+   let alumnoBuscado = nombre.find(Alumnos => Alumnos.nombre == nombrealumno)
+
+   if(alumnoBuscado == undefined) {
+       console.log("Alumno no activo")
+   } else {
+       console.log(alumnoBuscado)
+   }
+}
