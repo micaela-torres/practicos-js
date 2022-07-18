@@ -2,14 +2,15 @@
 
 const conductamuybuena = 10;
 const conductabuena = 7;
-const conductamala = 4;  
+const conductamala = 4;
+let alumno, nota1, nota2, nota3, nota4 
 
 do {
-    alumno = (prompt("Ingrese el nombre del alumno")).toLowerCase();
-    nota1 = parseFloat(prompt("Ingrese la nota examen 1")); 
-    nota2 = parseFloat(prompt("Ingrese la nota examen 2"));
-    nota3 = parseFloat(prompt("Ingrese la nota examen 3"));
-    nota4 = prompt("Ingrese conducta. Muy Buena, Buena o Mala").toLowerCase();
+   alumno = (prompt("Ingrese el nombre del alumno")).toLowerCase();
+   nota1 = parseFloat(prompt("Ingrese la nota examen 1")); 
+   nota2 = parseFloat(prompt("Ingrese la nota examen 2"));
+   nota3 = parseFloat(prompt("Ingrese la nota examen 3"));
+   nota4 = prompt("Ingrese conducta. Muy Buena, Buena o Mala").toLowerCase();
      if (nota4 === "muy buena"){
         nota4 = conductamuybuena;
      }else if (nota4 === "buena"){
